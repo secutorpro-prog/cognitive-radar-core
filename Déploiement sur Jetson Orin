@@ -1,0 +1,5 @@
+# Sur le Jetson (une seule fois)
+cd /opt/cognitive-radar
+# Récupère l’image la plus récente
+docker compose pull
+docker compose up -d
