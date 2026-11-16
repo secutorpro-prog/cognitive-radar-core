@@ -1,0 +1,12 @@
+mkdir -p monitoring
+cat > monitoring/prometheus.yml <<'EOF'
+global:
+  scrape_interval: 15s
+scrape_configs:
+  - job_name: 'cognitive-radar'
+    static_configs:
+      - targets: ['cognitive-radar:8080']
+EOF
+git add monitoring/prometheus.yml
+git commit -m "chore: add prometheus scrape config"
+git push
