@@ -1,0 +1,19 @@
+cognitive-radar-core/
+├─ .github/workflows/ci-cd.yml      # CI/CD GitHub Actions
+├─ Dockerfile                        # Multi‑stage (builder → runtime)
+├─ docker-compose.yml                # Stack Jetson (radar + monitoring)
+├─ deploy-netlify.sh                 # Netlify one‑click deploy
+├─ requirements.txt                  # Déps runtime (torch, fastapi, …)
+├─ requirements-dev.txt              # Déps dev (ruff, black, pytest, …)
+├─ src/
+│   └─ main.py                       # FastAPI app (expose /health, /metrics)
+├─ config/                           # Fichiers YAML de config (non versionnés secrets)
+├─ data/                             # Modèles, datasets, logs (volume persistant)
+├─ monitoring/
+│   ├─ prometheus.yml                # Scrape config
+│   └─ grafana/                      # Dashboards & datasources provisionnés
+├─ legal/
+│   └─ MSA_SECUTOR_PRO.md            # MSA + DPA (Markdown)
+├─ site/
+│   └─ index.html                    # Pillar page SEO (HTML + JSON‑LD)
+└─ README.md                         # Ce fichier
